@@ -74,11 +74,13 @@ names(averages2)[names(averages2)=="Group.1"] <- "Subject"
 ## uncomment line below to simplify column names
 ##names(averages2) <- gsub("-","",names(averages2))
 
-write.table(averages2, file = "Means_and_SDs_HAR_Data.csv",  sep = ",")
+## to write new dataset to file:
+# write.table(averages2, file = "Means_and_SDs_HAR_Data.csv",  sep = ",",
+#             row.names = FALSE)
 
 
-##example plot of data below.  Uncomment to run
+##example plot of data below
 
-# names(averages2)[names(averages2)=="tBodyAcc-mean()-X"] <- "acc"
-# library(ggplot2)
-# print(ggplot(averages2, aes(Subject,acc, colour = Activity)) + geom_point() )
+names(averages2)[names(averages2)=="tBodyAcc-mean()-X"] <- "tBodyacc_MeanX"
+library(ggplot2)
+print(ggplot(averages2, aes(Subject,tBodyacc_MeanX, colour = Activity)) + geom_point() )
