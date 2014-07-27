@@ -16,6 +16,8 @@ original 563 is the result.
 
 The aggregate function is then used to find the mean of the variables grouped by subject and activity.
 
+The resulting data table is output to Means_and_SDs_HAR_Data.csv, as shown in the repositiry.
+
 An example plot for one of the variables is also produced.
 
 
